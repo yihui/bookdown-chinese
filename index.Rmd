@@ -1,0 +1,48 @@
+--- 
+title: "麻麻说我们可以用 R Markdown 写书了"
+author: "张三"
+date: "`r Sys.Date()`"
+documentclass: ctexbook
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+colorlinks: yes
+lot: yes
+lof: yes
+geometry: [b5paper, tmargin=2.5cm, bmargin=2.5cm, lmargin=3.5cm, rmargin=2.5cm]
+site: bookdown::bookdown_site
+description: "一个简单的中文书示例。"
+github-repo: yihui/bookdown-chinese
+#cover-image: images/cover.jpg
+---
+
+```{r setup, include=FALSE}
+options(
+  htmltools.dir.version = FALSE, formatR.indent = 2, width = 55, digits = 4
+)
+
+# 填上你需要用到的包，如 c('ggplot2', 'dplyr')
+lapply(c(), function(pkg) {
+  if (system.file(package = pkg) == '') install.packages(pkg)
+})
+```
+
+# 前言 {-}
+
+你好，世界。我写了一本书。这本书是这样的，第 \@ref(intro) 章介绍了啥啥，第 \@ref(wind) 章说了啥啥，然后是啥啥……
+
+我用了两个 R 包编译这本书，分别是 **knitr**\index{knitr} [@xie2015] 和 **bookdown**\index{bookdown} [@R-bookdown]。以下是我的 R 进程信息：
+
+```{r}
+sessionInfo()
+```
+
+## 致谢 {-}
+
+非常感谢谁谁以及谁谁对我的帮助。艾玛，要不是他们神一样的队友，我两年前就写完这本书了。
+
+```{block2, type='flushright', html.tag='p'}
+张三  
+于 A 村某角落
+```
+

@@ -1,0 +1,19 @@
+\mainmatter
+
+# 牛刀小试 {#intro}
+
+现在我们可以试试 **bookdown** 的一些初级功能了，例如图表。图 \@ref(fig:hello) 是一幅无趣的散点图，表 \@ref(tab:iris) 是一份枯燥的数据。
+
+```{r hello, fig.cap='雷猴啊，散点图！', out.width='90%'}
+par(mar = c(4, 4, 1, .1))
+plot(cars, pch = 19)
+```
+
+```{r iris}
+knitr::kable(
+  head(iris), caption = '雷猴啊，iris 数据！',
+  booktabs = TRUE
+)
+```
+
+就这样，你可以一直编下去，直到编不下去。
