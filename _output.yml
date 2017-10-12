@@ -21,7 +21,7 @@ bookdown::pdf_book:
   dev: "cairo_pdf"
   latex_engine: xelatex
   citation_package: natbib
-  template: template.tex
+  template: latex/template.tex
   pandoc_args: --chapters
   toc_depth: 3
   toc_unnumbered: no
